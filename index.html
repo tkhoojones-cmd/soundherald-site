@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoundHerald Consulting | Executive search and people leadership for seed and early-stage companies</title>
+<meta name="description" content="Executive search, hiring process design, comp and equity frameworks, and people infrastructure for seed and early-stage companies. Led by a talent executive with 20+ years at Block, Shopify, SoundCloud and Relativity Space.">
+<meta property="og:title" content="SoundHerald Consulting">
+<meta property="og:description" content="Executive search, hiring process design, comp and equity frameworks, and people infrastructure for seed and early-stage companies. Led by a talent executive with 20+ years at Block, Shopify, SoundCloud and Relativity Space.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soundherald.com/">
+<meta name="theme-color" content="#f4efe3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Ccircle cx='17' cy='17' r='15' fill='%23ffd23f' stroke='%231f1d1a' stroke-width='2.5'/%3E%3Cpath d='M7 20 L19 15 L25 9 L25 23 L19 19 L7 22 Z' fill='%231f1d1a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Hanken+Grotesk:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#f4efe3}
+.sh-page {
+--paper: #f4efe3;
+--card: #fffcf4;
+--ink: #1f1d1a;
+--yellow: #ffd23f;
+--sky: #cfe3f2;
+--coral: #f2694c;
+--soft: #5a564e;
+--serif: "Newsreader", Georgia, "Times New Roman", serif;
+--sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+--mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+font-family: var(--sans);
+font-size: 18px;
+line-height: 1.6;
+color: var(--ink);
+background: var(--paper);
+-webkit-font-smoothing: antialiased;
+}
+.sh-page *, .sh-page *::before, .sh-page *::after { box-sizing: border-box; }
+.sh-page h1, .sh-page h2, .sh-page h3, .sh-page p, .sh-page ul, .sh-page li { margin: 0; padding: 0; text-transform: none; }
+.sh-page ul { list-style: none; }
+.sh-page a { text-decoration: none; color: inherit; }
+.sh-page svg { display: block; max-width: 100%; height: auto; }
+.sh-page .sh-wrap { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+/* type */
+.sh-page .sh-display {
+font-family: var(--serif); font-weight: 400; letter-spacing: -0.03em; line-height: 1.02;
+}
+.sh-page .sh-h1 { font-size: clamp(46px, 7.2vw, 92px); }
+.sh-page .sh-h2 { font-size: clamp(34px, 4.6vw, 58px); line-height: 1.05; }
+.sh-page .sh-h3 { font-size: clamp(25px, 2.7vw, 32px); line-height: 1.12; letter-spacing: -0.02em; }
+.sh-page .sh-lede { font-size: clamp(19px, 1.9vw, 22px); line-height: 1.55; color: var(--soft); max-width: 31em; }
+.sh-page .sh-body { color: var(--soft); font-size: 17px; }
+.sh-page .sh-tag {
+display: inline-block; font-family: var(--mono); font-weight: 500; font-size: 14px; line-height: 1;
+padding: 8px 12px; border: 2px solid var(--ink); border-radius: 999px; background: var(--paper);
+margin-bottom: 20px; color: var(--ink);
+}
+/* buttons */
+.sh-page .sh-btn {
+display: inline-block; font-family: var(--mono); font-weight: 500; font-size: 16px; line-height: 1;
+background: var(--yellow); color: var(--ink); padding: 18px 26px; min-height: 54px;
+border: 2px solid var(--ink); border-radius: 10px; box-shadow: 4px 4px 0 var(--ink);
+transition: transform .12s ease, box-shadow .12s ease;
+}
+.sh-page .sh-btn:hover { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+.sh-page .sh-btn.sh-on-yellow { background: var(--ink); color: var(--paper); box-shadow: 4px 4px 0 var(--paper); }
+.sh-page .sh-btn.sh-on-yellow:hover { box-shadow: 1px 1px 0 var(--paper); }
+.sh-page .sh-link { font-family: var(--mono); font-weight: 500; font-size: 16px; border-bottom: 2px solid currentColor; padding-bottom: 2px; }
+.sh-page .sh-link:hover { background: var(--yellow); }
+.sh-page a:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+/* nav */
+.sh-page .sh-nav { padding: 22px 0; }
+.sh-page .sh-nav .sh-wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.sh-page .sh-mark { font-family: var(--serif); font-weight: 500; font-size: 26px; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; }
+.sh-page .sh-nav .sh-btn { padding: 14px 20px; min-height: 46px; font-size: 15px; }
+/* hero */
+.sh-page .sh-hero { padding: 40px 0 88px; }
+.sh-page .sh-hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 56px; align-items: center; }
+.sh-page .sh-hero .sh-lede { margin: 32px 0 38px; }
+.sh-page .sh-actions { display: flex; flex-wrap: wrap; gap: 22px 30px; align-items: center; }
+.sh-page .sh-poster {
+background: var(--sky); border: 2px solid var(--ink); border-radius: 18px; box-shadow: 8px 8px 0 var(--ink);
+padding: 28px 20px 20px;
+}
+.sh-page .sh-poster svg { width: 100%; }
+.sh-page .sh-arc { stroke-dasharray: 1; stroke-dashoffset: 1; animation: sh-draw .5s ease-out forwards; }
+.sh-page .sh-arc:nth-of-type(2) { animation-delay: .25s; }
+.sh-page .sh-arc:nth-of-type(3) { animation-delay: .5s; }
+@keyframes sh-draw { to { stroke-dashoffset: 0; } }
+/* proof */
+.sh-page .sh-proof { border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); background: var(--card); }
+.sh-page .sh-proof-names { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.sh-page .sh-proof-names li {
+font-family: var(--serif); font-size: clamp(22px, 2.6vw, 32px); letter-spacing: -0.02em; text-align: center;
+padding: 30px 12px; border-left: 2px solid var(--ink);
+}
+.sh-page .sh-proof-names li:first-child { border-left: 0; }
+.sh-page .sh-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--ink); }
+.sh-page .sh-stat { padding: 32px 28px 34px; border-left: 2px solid var(--ink); }
+.sh-page .sh-stat:first-child { border-left: 0; }
+.sh-page .sh-stat b { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(54px, 7vw, 88px); line-height: 1; letter-spacing: -0.04em; margin-bottom: 10px; }
+.sh-page .sh-stat span { color: var(--soft); font-size: 16px; line-height: 1.45; display: block; max-width: 20em; }
+/* sections */
+.sh-page .sh-block { padding: 104px 0 0; }
+.sh-page .sh-head { max-width: 15em; margin-bottom: 44px; }
+/* when to call */
+.sh-page .sh-when { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.sh-page .sh-when li {
+font-family: var(--serif); font-size: clamp(23px, 2.4vw, 29px); line-height: 1.2; letter-spacing: -0.015em;
+padding: 26px 0; border-top: 2px solid var(--ink);
+}
+/* services */
+.sh-page .sh-group + .sh-group { margin-top: 88px; }
+.sh-page .sh-group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+.sh-page .sh-group-head p { color: var(--soft); max-width: 24em; }
+.sh-page .sh-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.sh-page .sh-card {
+background: var(--card); border: 2px solid var(--ink); border-radius: 16px; box-shadow: 6px 6px 0 var(--ink);
+padding: 34px 32px 36px;
+}
+.sh-page .sh-card .sh-h3 { margin-bottom: 16px; }
+.sh-page .sh-card.sh-wide { grid-column: 1 / -1; }
+.sh-page .sh-card.sh-wide .sh-body { max-width: 40em; }
+.sh-page .sh-card.sh-yellow { background: var(--yellow); }
+.sh-page .sh-card.sh-yellow .sh-body { color: var(--ink); }
+.sh-page .sh-card.sh-sky { background: var(--sky); }
+.sh-page .sh-card.sh-sky .sh-body { color: #2f3a42; }
+/* how I work */
+.sh-page .sh-dark { background: var(--ink); color: var(--paper); margin-top: 112px; padding: 96px 0 104px; }
+.sh-page .sh-dark .sh-h2 { color: var(--paper); margin-bottom: 52px; max-width: 14em; }
+.sh-page .sh-how { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px; }
+.sh-page .sh-how-item { border-top: 2px solid var(--yellow); padding-top: 24px; }
+.sh-page .sh-how-item h3 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.1; letter-spacing: -0.02em; color: var(--yellow); margin-bottom: 14px; }
+.sh-page .sh-how-item p { color: #d9d3c4; font-size: 17px; }
+/* ways to start */
+.sh-page .sh-ways { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.sh-page .sh-ways .sh-card { padding: 30px 28px 32px; }
+.sh-page .sh-ways .sh-h3 { margin-bottom: 12px; }
+/* closing */
+.sh-page .sh-close { background: var(--yellow); border-top: 2px solid var(--ink); margin-top: 112px; padding: 104px 0 112px; }
+.sh-page .sh-close .sh-h1 { font-size: clamp(42px, 6.4vw, 80px); max-width: 12em; margin-bottom: 44px; }
+.sh-page .sh-close .sh-actions p { font-size: 17px; max-width: 22em; }
+.sh-page .sh-foot { background: var(--ink); color: #d9d3c4; font-size: 15px; padding: 30px 0 34px; }
+.sh-page .sh-foot .sh-wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; }
+.sh-page .sh-foot a { border-bottom: 1px solid #8d877a; }
+.sh-page .sh-foot a:hover { color: #fff; border-bottom-color: #fff; }
+@media (max-width: 860px) {
+.sh-page { font-size: 17px; }
+.sh-page .sh-wrap { padding: 0 22px; }
+.sh-page .sh-hero { padding: 24px 0 64px; }
+.sh-page .sh-hero-grid { grid-template-columns: 1fr; gap: 44px; }
+.sh-page .sh-poster { max-width: 440px; }
+.sh-page .sh-proof-names { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sh-page .sh-proof-names li:nth-child(3) { border-left: 0; }
+.sh-page .sh-proof-names li:nth-child(n+3) { border-top: 2px solid var(--ink); }
+.sh-page .sh-stats { grid-template-columns: 1fr; }
+.sh-page .sh-stat { border-left: 0; border-top: 2px solid var(--ink); padding: 26px 22px; }
+.sh-page .sh-stat:first-child { border-top: 0; }
+.sh-page .sh-block { padding-top: 76px; }
+.sh-page .sh-when, .sh-page .sh-grid, .sh-page .sh-how, .sh-page .sh-ways { grid-template-columns: 1fr; }
+.sh-page .sh-when { gap: 0; }
+.sh-page .sh-grid, .sh-page .sh-ways { gap: 24px; }
+.sh-page .sh-card { padding: 28px 24px 30px; box-shadow: 5px 5px 0 var(--ink); }
+.sh-page .sh-group + .sh-group { margin-top: 64px; }
+.sh-page .sh-dark { margin-top: 80px; padding: 72px 0 80px; }
+.sh-page .sh-close { margin-top: 80px; padding: 72px 0 80px; }
+}
+@media (max-width: 560px) {
+.sh-page .sh-nav .sh-btn { display: none; }
+.sh-page .sh-mark { font-size: 23px; white-space: nowrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+.sh-page .sh-arc { animation: none; stroke-dashoffset: 0; }
+.sh-page .sh-btn { transition: none; }
+.sh-page .sh-btn:hover { transform: none; box-shadow: 4px 4px 0 var(--ink); }
+}
+</style>
+</head>
+<body>
+<div class="sh-page">
+<nav class="sh-nav">
+<div class="sh-wrap">
+<a class="sh-mark" href="#top" aria-label="SoundHerald Consulting">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+<circle cx="17" cy="17" r="15" fill="#ffd23f" stroke="#1f1d1a" stroke-width="2.5"/>
+<path d="M7 20 L19 15 L25 9 L25 23 L19 19 L7 22 Z" fill="#1f1d1a"/>
+</svg>
+<span class="sh-word">SoundHerald Consulting</span>
+</a>
+<a class="sh-btn" href="mailto:tkhoojones@soundherald.com?subject=Intro%20call">Book an intro call</a>
+</div>
+</nav>
+<header id="top" class="sh-hero">
+<div class="sh-wrap sh-hero-grid">
+<div>
+<h1 class="sh-display sh-h1">The person you need isn't on LinkedIn applying to jobs.</h1>
+<p class="sh-lede">
+I help seed and early-stage companies hire senior leaders and build the people side properly:
+executive search, hiring process, comp and equity, and the infrastructure your next round will test.
+</p>
+<div class="sh-actions">
+<a class="sh-btn" href="mailto:tkhoojones@soundherald.com?subject=Intro%20call">Book an intro call</a>
+<a class="sh-link" href="#sh-services">See what I do</a>
+</div>
+</div>
+<div class="sh-poster" role="img" aria-label="Illustration of a herald's trumpet with a pennant, sounding three arcs">
+<svg viewBox="0 0 440 330" aria-hidden="true">
+<g transform="translate(26 214) rotate(-16)" stroke="#1f1d1a" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+<path d="M104 10 L212 10 L212 108 L158 82 L104 108 Z" fill="#f2694c"/>
+<path d="M104 10 L212 10" fill="none"/>
+<text x="158" y="62" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="40" font-weight="500" fill="#1f1d1a" stroke="none">SH</text>
+<rect x="52" y="-11" width="164" height="22" rx="5" fill="#ffd23f"/>
+<path d="M212 -11 C 236 -14 258 -34 276 -66 L 276 66 C 258 34 236 14 212 11 Z" fill="#ffd23f"/>
+<rect x="106" y="-15" width="12" height="30" rx="4" fill="#fffcf4"/>
+<rect x="170" y="-15" width="12" height="30" rx="4" fill="#fffcf4"/>
+<circle cx="40" cy="0" r="15" fill="#fffcf4"/>
+<circle cx="40" cy="0" r="5" fill="#1f1d1a"/>
+<path class="sh-arc" pathLength="1" d="M300 -34 Q 322 0 300 34" fill="none"/>
+<path class="sh-arc" pathLength="1" d="M324 -56 Q 360 0 324 56" fill="none"/>
+<path class="sh-arc" pathLength="1" d="M348 -78 Q 398 0 348 78" fill="none"/>
+</g>
+</svg>
+</div>
+</div>
+</header>
+<section class="sh-proof" aria-label="Experience">
+<div class="sh-wrap" style="padding:0;max-width:none;">
+<ul class="sh-proof-names">
+<li>Block</li>
+<li>Shopify</li>
+<li>SoundCloud</li>
+<li>Relativity Space</li>
+</ul>
+<div class="sh-stats">
+<div class="sh-stat"><b>20+</b><span>years leading talent functions</span></div>
+<div class="sh-stat"><b>4</b><span>sectors: fintech, e-commerce, media and deep tech</span></div>
+<div class="sh-stat"><b>6</b><span>regions: US, Canada, UK, Germany, Singapore and Asia-Pacific</span></div>
+</div>
+</div>
+</section>
+<section class="sh-block">
+<div class="sh-wrap">
+<h2 class="sh-display sh-h2 sh-head">Call me when</h2>
+<ul class="sh-when">
+<li>You need a VP or C-suite hire and can't afford a miss.</li>
+<li>You're moving fast and your interviews have gone to gut feel.</li>
+<li>A board meeting or funding round is coming and you need headcount, comp and equity answers.</li>
+<li>You want to hire in a new country before you have a legal entity there.</li>
+<li>You're being pitched AI and HR tech and can't tell what's real.</li>
+<li>Good people keep leaving and you only find out when they resign.</li>
+</ul>
+</div>
+</section>
+<main id="sh-services" class="sh-block">
+<div class="sh-wrap">
+<div class="sh-group">
+<div class="sh-group-head">
+<h2 class="sh-display sh-h2">Hire well</h2>
+<p>Where I help seed and early-stage companies get the right people in.</p>
+</div>
+<div class="sh-grid">
+<section class="sh-card sh-wide sh-yellow">
+<span class="sh-tag">Executive Search</span>
+<h3 class="sh-display sh-h3">I find people who aren't looking, tell you the truth about what I'm seeing, and close them.</h3>
+<p class="sh-body">I've run C-suite and senior searches across the US, Europe, and multiple Asia-Pacific markets. No agency markup. No incentive to fill the role fast at the expense of filling it right. I've made these calls at Block and Shopify and I know what a great hire at your stage actually looks like.</p>
+</section>
+<section class="sh-card">
+<span class="sh-tag">Selection Process Design</span>
+<h3 class="sh-display sh-h3">Speed kills hiring quality.</h3>
+<p class="sh-body">When you're moving fast, gut feel takes over and inconsistency creeps in. I design interview processes that are structured without being slow: competency frameworks, scorecards, documented criteria, and calibration sessions. The kind of infrastructure that let Shopify fill thousands of roles in a single year and still know exactly what they were hiring for.</p>
+</section>
+<section class="sh-card">
+<span class="sh-tag">Global Expansion</span>
+<h3 class="sh-display sh-h3">Hiring in a new country is not a recruiting problem.</h3>
+<p class="sh-body">It's a legal, structural, and cultural problem with recruiting on top. I've built people functions across the US, Canada, UK, Germany, Singapore, and Asia-Pacific. I know which decisions are reversible and which ones aren't, and I know how to hire before you have a legal entity in market.</p>
+</section>
+</div>
+</div>
+<div class="sh-group">
+<div class="sh-group-head">
+<h2 class="sh-display sh-h2">Plan, pay and keep</h2>
+<p>The structure that holds up at your next round.</p>
+</div>
+<div class="sh-grid">
+<section class="sh-card sh-sky">
+<span class="sh-tag">Workforce Planning and Unit Economics</span>
+<h3 class="sh-display sh-h3">Know who to hire first, what they should produce, and what it costs if they don't.</h3>
+<p class="sh-body">I build headcount models with real business logic attached: revenue per employee targets, cost per hire ratios, capacity models by function. When you're in front of your board, you'll have the numbers.</p>
+</section>
+<section class="sh-card">
+<span class="sh-tag">Compensation and Equity Frameworks</span>
+<h3 class="sh-display sh-h3">Every shortcut you take on comp now becomes a problem at the next round.</h3>
+<p class="sh-body">I build the full structure: job levels, salary bands, equity philosophy, vesting, refresh cadences, and acceleration provisions. Designed to compete for great people without creating chaos on your cap table.</p>
+</section>
+<section class="sh-card sh-wide">
+<span class="sh-tag">Retention and People Infrastructure</span>
+<h3 class="sh-display sh-h3">By the time someone tells you they're leaving, the decision was made weeks ago.</h3>
+<p class="sh-body">The signals were there. I help you build the practices that surface those signals early: onboarding that actually works, performance management that doesn't feel like HR, benefits and LTIP design, and the people metrics that tell you what's really happening on your team.</p>
+</section>
+</div>
+</div>
+<div class="sh-group">
+<div class="sh-group-head">
+<h2 class="sh-display sh-h2">Tools and AI</h2>
+<p>What to buy, what to build, and what to ignore.</p>
+</div>
+<div class="sh-grid">
+<section class="sh-card">
+<span class="sh-tag">AI in HR and People Workflows</span>
+<h3 class="sh-display sh-h3">Every HR tech vendor has an AI story right now. Most of them aren't ready.</h3>
+<p class="sh-body">I'm actively building HR AI applications, including screening tools, onboarding agents, intelligent dashboards, and performance signal systems, so I know what works in production and what only looks good in a demo. I can help you evaluate vendors, find where automation actually moves the needle, and avoid the quiet failures that come from deploying tools before they're ready.</p>
+</section>
+<section class="sh-card sh-sky">
+<span class="sh-tag">HR and Talent Tech Stack</span>
+<h3 class="sh-display sh-h3">The vendor will always tell you their tool is right for your stage.</h3>
+<p class="sh-body">ATS, HRIS, performance management, L&amp;D, fraud detection, referral platforms. I've evaluated and implemented most of the major platforms at scale. I'll tell you what to buy, what to wait on, and what to consider building yourself.</p>
+</section>
+</div>
+</div>
+</div>
+</main>
+<section class="sh-dark">
+<div class="sh-wrap">
+<h2 class="sh-display sh-h2">Straight answers, no rush to close.</h2>
+<div class="sh-how">
+<div class="sh-how-item">
+<h3>No markup, no clock</h3>
+<p>I have no incentive to fill a role fast at the expense of filling it right.</p>
+</div>
+<div class="sh-how-item">
+<h3>The truth, early</h3>
+<p>You get what I'm actually seeing in the market and in your process, including the parts you won't like.</p>
+</div>
+<div class="sh-how-item">
+<h3>I build, not just advise</h3>
+<p>Scorecards, models, comp structures and working AI tools, delivered as things you can use on Monday.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="sh-block">
+<div class="sh-wrap">
+<h2 class="sh-display sh-h2 sh-head">Three ways to start</h2>
+<div class="sh-ways">
+<div class="sh-card">
+<h3 class="sh-display sh-h3">A project</h3>
+<p class="sh-body">One defined piece of work: a comp and equity framework, a hiring process, a headcount model, a vendor evaluation.</p>
+</div>
+<div class="sh-card sh-yellow">
+<h3 class="sh-display sh-h3">A search</h3>
+<p class="sh-body">A senior or C-suite search, run end to end, from defining the role through to closing the candidate.</p>
+</div>
+<div class="sh-card">
+<h3 class="sh-display sh-h3">An ongoing advisor</h3>
+<p class="sh-body">A standing relationship for founders who want a sounding board and hands-on help as people questions come up.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="sh-close">
+<div class="sh-wrap">
+<h2 class="sh-display sh-h1">Tell me where you are. I'll tell you what I'd do.</h2>
+<div class="sh-actions">
+<a class="sh-btn sh-on-yellow" href="mailto:tkhoojones@soundherald.com?subject=Intro%20call">Book an intro call</a>
+<p>A short, confidential call. No pitch deck, no obligation.</p>
+</div>
+</div>
+</section>
+<footer class="sh-foot">
+<div class="sh-wrap">
+<span>&copy; 2026 SoundHerald Consulting</span>
+<a href="https://www.linkedin.com/in/timothykhoojones" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</footer>
+</div>
+</body>
+</html>
