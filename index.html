@@ -9,12 +9,12 @@
 <meta property="og:description" content="Executive search, hiring process design, comp and equity frameworks, and people infrastructure for seed and early-stage companies. Led by a talent executive with 20+ years at Block, Shopify, SoundCloud and Relativity Space.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://soundherald.com/">
-<meta property="og:image" content="https://soundherald.com/assets/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SoundHerald Consulting">
+<meta property="og:image" content="https://soundherald.com/assets/mark.png">
+<meta property="og:image:width" content="768">
+<meta property="og:image:height" content="451">
+<meta property="og:image:alt" content="SoundHerald">
 <meta name="theme-color" content="#fdf7f1">
-<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="icon" href="assets/mark.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
@@ -86,15 +86,11 @@ img, svg { display: block; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
   min-height: 44px;
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1;
+  min-width: 0;
+  max-width: min(293px, 100%);
 }
-.brand img { width: 56px; height: 39px; }
+.brand img { width: 100%; height: auto; }
 .cta, .quiet {
   display: inline-flex;
   align-items: center;
@@ -271,12 +267,7 @@ img, svg { display: block; }
     justify-content: initial;
     gap: 0.9rem 1.25rem;
   }
-  .brand { font-size: 1.15rem; gap: 0.65rem; }
-  .brand img { width: 46px; height: 32px; }
   .lede { font-size: 1.1rem; }
-}
-@media (max-width: 380px) {
-  .brand span { font-size: 1.02rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -289,8 +280,7 @@ img, svg { display: block; }
 <div class="wrap">
 <nav class="nav" aria-label="Primary">
 <a class="brand" href="#top">
-<img src="assets/mark.svg" alt="" width="56" height="39">
-<span>SoundHerald Consulting</span>
+<img src="assets/logo.png" alt="SoundHerald" width="1579" height="226">
 </a>
 <a class="cta" href="mailto:tkhoojones@soundherald.com?subject=Intro%20call">Book an intro call</a>
 </nav>
