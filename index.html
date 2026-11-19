@@ -155,11 +155,18 @@ img, svg { display: block; }
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.names li {
-  font-weight: 500;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+.names li { display: flex; align-items: center; }
+.names img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
 }
+.logo-block { height: 26px; }
+.logo-shopify { height: 38px; }
+.logo-soundcloud { height: 22px; }
+.logo-relativity { height: 30px; }
 .stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -265,8 +272,13 @@ img, svg { display: block; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: initial;
-    gap: 0.9rem 1.25rem;
+    align-items: center;
+    gap: 1.35rem 1.25rem;
   }
+  .logo-block { height: 22px; }
+  .logo-shopify { height: 32px; }
+  .logo-soundcloud { width: 100%; height: auto; }
+  .logo-relativity { height: 26px; }
   .lede { font-size: 1.1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -300,10 +312,10 @@ img, svg { display: block; }
 <section class="block proof" aria-label="Experience">
 <div class="wrap">
 <ul class="names">
-<li>Block</li>
-<li>Shopify</li>
-<li>SoundCloud</li>
-<li>Relativity Space</li>
+<li><img class="logo-block" src="assets/logos/block.svg" alt="Block" width="116" height="35"></li>
+<li><img class="logo-shopify" src="assets/logos/shopify.svg" alt="Shopify" width="612" height="192"></li>
+<li><img class="logo-soundcloud" src="assets/logos/soundcloud.svg" alt="SoundCloud" width="125" height="14"></li>
+<li><img class="logo-relativity" src="assets/logos/relativity.svg" alt="Relativity Space" width="1343" height="386"></li>
 </ul>
 <ul class="stats">
 <li><strong>20+</strong><span>years leading talent functions</span></li>
