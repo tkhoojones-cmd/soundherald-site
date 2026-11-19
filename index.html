@@ -83,6 +83,14 @@ img, svg { display: block; }
   gap: 0.75rem 1.5rem;
   flex-wrap: wrap;
 }
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem 1.5rem;
+  margin-left: auto;
+}
 .brand {
   display: inline-flex;
   align-items: center;
@@ -261,7 +269,38 @@ img, svg { display: block; }
   gap: 0.75rem 1.5rem;
   flex-wrap: wrap;
 }
-#sh-services, #top { scroll-margin-top: 1rem; }
+#sh-services, #top, #product-leaders { scroll-margin-top: 1rem; }
+.caption {
+  margin: 0 0 0.85rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.leaders .body {
+  max-width: 40rem;
+  margin: 0 0 1rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+.leaders .body + .body { margin-bottom: 0; }
+.leaders .split { margin-top: 2.25rem; }
+#leaders-heading { max-width: 16em; }
+.founder-grid {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 1.25rem 2.5rem;
+  align-items: start;
+}
+.founder img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid var(--navy);
+}
+.founder h2 { margin-bottom: 0.3rem; }
+.founder .role { margin: 0 0 1rem; font-weight: 500; }
+.founder .bio { margin: 0 0 0.35rem; }
 @media (max-width: 800px) {
   .wrap { width: min(1080px, calc(100% - 2.5rem)); }
   .hero { padding-top: 2.25rem; }
@@ -280,6 +319,8 @@ img, svg { display: block; }
   .logo-soundcloud { width: 100%; height: auto; }
   .logo-relativity { height: 26px; }
   .lede { font-size: 1.1rem; }
+  .founder-grid { grid-template-columns: 1fr; }
+  .founder img { width: 160px; height: 160px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -294,7 +335,10 @@ img, svg { display: block; }
 <a class="brand" href="#top">
 <img src="assets/logo.png" alt="SoundHerald" width="1579" height="226">
 </a>
+<div class="nav-links">
+<a class="quiet" href="#product-leaders">For product leaders</a>
 <a class="cta" href="mailto:contact@soundherald.com?subject=Intro%20call">Book an intro call</a>
+</div>
 </nav>
 </div>
 </header>
@@ -309,8 +353,35 @@ img, svg { display: block; }
 </div>
 </div>
 </section>
+<section class="block leaders" id="product-leaders" aria-labelledby="leaders-heading">
+<div class="wrap">
+<p class="tag">For product leaders</p>
+<h2 id="leaders-heading">If we reached out, here's who you're talking to.</h2>
+<p class="body">SoundHerald works with product leaders at a small number of high-growth companies to find their senior PMs. We don't send out roles in bulk or work from keyword searches. If we get in touch, it's because someone who understands product orgs thinks you're worth a conversation.</p>
+<p class="body">We don't work with everyone. We take on a few searches at a time, for teams we'd be proud to introduce you to.</p>
+<div class="split">
+<article>
+<h3>Confidential by default</h3>
+<p>Nothing goes to a company without your say-so.</p>
+</article>
+<article>
+<h3>Straight answers early</h3>
+<p>We'll tell you the level, the scope, the team and the comp range up front, and whether we really think it's a fit.</p>
+</article>
+<article>
+<h3>Worth thirty minutes even if you say no</h3>
+<p>You'll come away with an honest read on the market and your next move.</p>
+</article>
+</div>
+<div class="actions">
+<a class="cta" href="mailto:contact@soundherald.com?subject=Confidential%20conversation">Start a confidential conversation</a>
+<a class="quiet" href="https://www.linkedin.com/in/timothykhoojones/" target="_blank" rel="noopener">or reply on LinkedIn<span class="sr"> (opens in a new tab)</span></a>
+</div>
+</div>
+</section>
 <section class="block proof" aria-label="Experience">
 <div class="wrap">
+<p class="caption">Experience from</p>
 <ul class="names">
 <li><img class="logo-block" src="assets/logos/block.svg" alt="Block" width="116" height="35"></li>
 <li><img class="logo-shopify" src="assets/logos/shopify.svg" alt="Shopify" width="612" height="192"></li>
@@ -436,6 +507,17 @@ img, svg { display: block; }
 <h3>An ongoing advisor</h3>
 <p>A standing relationship for founders who want a sounding board and hands-on help as people questions come up.</p>
 </article>
+</div>
+</div>
+</section>
+<section class="block founder" aria-labelledby="founder-heading">
+<div class="wrap founder-grid">
+<img src="assets/timothy-portrait.jpg" alt="Hand-drawn portrait of Timothy Khoo-Jones" width="480" height="480">
+<div>
+<h2 id="founder-heading">Timothy Khoo-Jones</h2>
+<p class="role">Founder</p>
+<p class="bio">Timothy ran Talent at Block, and before that led Talent Attraction at Shopify. Earlier, he helped build an engineering, product and design team from scratch at a startup, alongside a product leader he still works with today. He has spent more than 20 years hiring the people who build products.</p>
+<a class="quiet" href="https://www.linkedin.com/in/timothykhoojones/" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a>
 </div>
 </div>
 </section>
