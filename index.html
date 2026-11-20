@@ -100,20 +100,20 @@ img, svg { display: block; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.65rem;
   min-height: 44px;
   text-decoration: none;
   color: var(--ink);
 }
 .brand img {
-  height: 30px;
+  height: 42px;
   width: auto;
   display: block;
 }
 .brand-name {
   font-family: "Newsreader", Georgia, serif;
   font-weight: 500;
-  font-size: 1.625rem;
+  font-size: 2.15rem;
   letter-spacing: -0.02em;
   line-height: 1;
   font-optical-sizing: auto;
@@ -299,13 +299,7 @@ img, svg { display: block; }
   gap: 0.15rem 1.5rem;
   margin-left: auto;
 }
-.board-live {
-  margin-top: 0.85rem;
-  max-width: 40rem;
-  font-size: 1.0625rem;
-  line-height: 1.65;
-}
-#sh-services, #top, #candidates { scroll-margin-top: 1rem; }
+#sh-services, #top, #candidates, #projects { scroll-margin-top: 1rem; }
 .caption {
   margin: 0 0 0.85rem;
   font-size: 0.8125rem;
@@ -395,6 +389,10 @@ img, svg { display: block; }
   .founder-grid { grid-template-columns: 1fr; }
   .founder img { width: 160px; height: 160px; }
 }
+@media (max-width: 600px) {
+  .brand img { height: 34px; }
+  .brand-name { font-size: 1.75rem; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
@@ -406,10 +404,11 @@ img, svg { display: block; }
 <div class="wrap">
 <nav class="nav" aria-label="Primary">
 <a class="brand" href="#top" aria-label="SoundHerald">
-<img src="assets/mark.png" alt="" aria-hidden="true" width="51" height="30">
+<img src="assets/mark.png" alt="" aria-hidden="true" width="71" height="42">
 <span class="brand-name">SoundHerald</span>
 </a>
 <div class="nav-links">
+<a class="quiet" href="#projects">Projects</a>
 <a class="quiet" href="#candidates">For candidates</a>
 <a class="cta" href="mailto:contact@soundherald.com?subject=Intro%20call">Book an intro call</a>
 </div>
@@ -547,11 +546,18 @@ img, svg { display: block; }
 <h3>The vendor will always tell you their tool is right for your stage.</h3>
 <p>We've evaluated and implemented most of the major platforms at scale across ATS, HRIS, performance management, L&amp;D, fraud detection, and referral tools. We'll tell you what to buy, what to wait on, and what to consider building yourself.</p>
 </article>
+</div>
+</div>
+</section>
+<section class="block" id="projects" aria-labelledby="projects-heading">
+<div class="wrap">
+<h2 id="projects-heading">Projects</h2>
+<p class="intro">Public tools we build and maintain.</p>
+<div class="offers">
 <article class="offer">
-<span class="tag">Built by SoundHerald</span>
+<span class="tag">Daily tracker</span>
 <h3>VP Talent Board</h3>
-<p>A free, daily-verified tracker of open VP Talent, Head of Talent, and Chief People Officer roles across the US and Canada, alongside senior recruiting roles, leadership moves, and recent funding rounds.</p>
-<p class="board-live" id="board-live">Updated daily from employer career sites.</p>
+<p>A free, daily-verified tracker of open VP Talent, Head of Talent, and Chief People Officer roles across the US and Canada, alongside senior recruiting roles, leadership moves, and funding signals.</p>
 <a class="quiet" href="https://jobs.soundherald.com/">Explore the VP Talent Board</a>
 </article>
 </div>
@@ -613,21 +619,5 @@ img, svg { display: block; }
 </div>
 </div>
 </footer>
-<script>
-(async function () {
-  var el = document.getElementById('board-live');
-  if (!el) return;
-  try {
-    var res = await fetch('https://raw.githubusercontent.com/tkhoojones-cmd/talent-board/main/data.json');
-    if (!res.ok) return;
-    var data = await res.json();
-    var roles = Array.isArray(data.roles) ? data.roles.length : 0;
-    var recruiting = Array.isArray(data.ic) ? data.ic.length : 0;
-    var moves = Array.isArray(data.moves) ? data.moves.length : 0;
-    var funding = Array.isArray(data.funding) ? data.funding.length : 0;
-    el.textContent = roles + ' open leadership roles, ' + recruiting + ' senior recruiting roles, ' + moves + ' leadership moves, and ' + funding + ' funding signals tracked daily.';
-  } catch (err) {}
-})();
-</script>
 </body>
 </html>
