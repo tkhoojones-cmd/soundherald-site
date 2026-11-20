@@ -25,6 +25,7 @@
 :root {
   --cream: #fdf7f1;
   --navy: #17133d;
+  --ink: #17133d;
   --terracotta: #c4553a;
   --line: rgba(23, 19, 61, 0.16);
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
@@ -99,11 +100,26 @@ img, svg { display: block; }
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: 0.55rem;
   min-height: 44px;
-  min-width: 0;
-  max-width: min(293px, 100%);
+  text-decoration: none;
+  color: var(--ink);
 }
-.brand img { width: 100%; height: auto; }
+.brand img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+.brand-name {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.625rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-optical-sizing: auto;
+  color: var(--ink);
+  white-space: nowrap;
+}
 .cta, .quiet {
   display: inline-flex;
   align-items: center;
@@ -271,8 +287,23 @@ img, svg { display: block; }
 .site-footer .wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 0.75rem 1.5rem;
   flex-wrap: wrap;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem 1.5rem;
+  margin-left: auto;
+}
+.board-live {
+  margin-top: 0.85rem;
+  max-width: 40rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 #sh-services, #top, #candidates { scroll-margin-top: 1rem; }
 .caption {
@@ -374,8 +405,9 @@ img, svg { display: block; }
 <header class="site-header" id="top">
 <div class="wrap">
 <nav class="nav" aria-label="Primary">
-<a class="brand" href="#top">
-<img src="assets/logo.png" alt="SoundHerald" width="1579" height="226">
+<a class="brand" href="#top" aria-label="SoundHerald">
+<img src="assets/mark.png" alt="" aria-hidden="true" width="51" height="30">
+<span class="brand-name">SoundHerald</span>
 </a>
 <div class="nav-links">
 <a class="quiet" href="#candidates">For candidates</a>
@@ -515,6 +547,13 @@ img, svg { display: block; }
 <h3>The vendor will always tell you their tool is right for your stage.</h3>
 <p>We've evaluated and implemented most of the major platforms at scale across ATS, HRIS, performance management, L&amp;D, fraud detection, and referral tools. We'll tell you what to buy, what to wait on, and what to consider building yourself.</p>
 </article>
+<article class="offer">
+<span class="tag">Built by SoundHerald</span>
+<h3>VP Talent Board</h3>
+<p>A free, daily-verified tracker of open VP Talent, Head of Talent, and Chief People Officer roles across the US and Canada, alongside senior recruiting roles, leadership moves, and recent funding rounds.</p>
+<p class="board-live" id="board-live">Updated daily from employer career sites.</p>
+<a class="quiet" href="https://jobs.soundherald.com/">Explore the VP Talent Board</a>
+</article>
 </div>
 </div>
 </section>
@@ -568,8 +607,27 @@ img, svg { display: block; }
 <footer class="site-footer">
 <div class="wrap">
 <span>&copy; 2026 SoundHerald Consulting</span>
+<div class="footer-links">
+<a class="quiet" href="https://jobs.soundherald.com/">VP Talent Board</a>
 <a class="quiet" href="https://www.linkedin.com/in/timothykhoojones/" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a>
 </div>
+</div>
 </footer>
+<script>
+(async function () {
+  var el = document.getElementById('board-live');
+  if (!el) return;
+  try {
+    var res = await fetch('https://raw.githubusercontent.com/tkhoojones-cmd/talent-board/main/data.json');
+    if (!res.ok) return;
+    var data = await res.json();
+    var roles = Array.isArray(data.roles) ? data.roles.length : 0;
+    var recruiting = Array.isArray(data.ic) ? data.ic.length : 0;
+    var moves = Array.isArray(data.moves) ? data.moves.length : 0;
+    var funding = Array.isArray(data.funding) ? data.funding.length : 0;
+    el.textContent = roles + ' open leadership roles, ' + recruiting + ' senior recruiting roles, ' + moves + ' leadership moves, and ' + funding + ' funding signals tracked daily.';
+  } catch (err) {}
+})();
+</script>
 </body>
 </html>
